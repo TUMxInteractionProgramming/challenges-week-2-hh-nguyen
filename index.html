@@ -10,122 +10,44 @@
     <meta charset="UTF-8">
 
     <!-- #2 #css #elements -->
-    <style>
-
-        /* #2 #colorful #palette is:
-          * Background: #F5F5F5 (GREY 100)
-          * Primary Text: black
-
-          * Primary color: #3F51B5 (INDIGO)
-          * Primary color_text : white
-          * Accent color: #CDDC39 (LIME)
-          * Accent color_text: black
-          */
-
-        /*global styles */
-        * {
-            /* #2 #font #faces */
-            font-family: 'Arial', sans-serif;
-        }
-
-        body {
-            /* #2 #colorful #background */
-            background-color: #F5F5F5;
-        }
-
-        h1 {
-            /* #2 #colourful #app-bar */
-            background-color: #3F51B5;
-            color: white;
-        }
-
-        button {
-            /* #2 #colourful #plusfive */
-            background-color: #CDDC39;
-            color: black;
-            /* #2 #font capital #letters */
-            text-transform: uppercase;
-        }
-
-        /*styles for channel area*/
-        h2 {
-            /* #2 #colorful #channelandchat */
-            background-color: white;
-        }
-
-        /*styles for chat area*/
-        p {
-            /* #2 #colorful #channelandchat */
-            background-color: white;
-        }
-
-        strong {
-            /* #2 #font #locations need an extra element, we'll use strong for w3w locations */
-            text-transform: uppercase;
-        }
-
-        h3 {
-            /* #2 #font #metadata is now medium */
-            font-size: medium;
-        }
-
-        em {
-            /* #2 #font #remaining overrides the default italic appearance of em elements*/
-            font-size: larger;
-            font-style: normal;
-        }
-        
-        div {
-            /* #tab-bar: #container */
-            background-color: white;
-            
-            /* #chat: #width */
-            width: 80%;
-        }
-
-        ul {
-            /* #channel: #list with white background, no #bullet */
-            list-style-type: none;
-            background-color: white;
-        }
-
-        a {
-            /* #chat: #link */
-            color: black;
-        }
-        
-    </style>
+    <link rel="stylesheet" href="css/style.css"/>
+    <!-- Use of external font -->
+    <link rel="stylesheet" 
+          href="https://fonts.googleapis.com/css?family=Roboto">
 
 </head>
 
 <body>
 
 <!-- channel area -->
+
 <!-- #1 #channels #app-bar -->
-<!-- #channel: #moocus logo -->
+<!-- #channel #moocus -->
 <h1><img src="https://ip.lfe.mw.tum.de/sections/moocus.png" alt="moocus.png" height="56">chatter|app</h1>
 
 <div>
     <!-- #1 #channels #topics -->
-    <!-- #channel: #favorite -->
+    <!-- #channel #favorite -->
     <ul>
         <li>#Yummy <img src="https://ip.lfe.mw.tum.de/sections/star-o.png" alt="star-o.png"></li>
-        <li>#SevenContinents <img src="https://ip.lfe.mw.tum.de/sections/star.png" alt="star-o.png"></li>
+        <li class="list_selected">#SevenContinents <img src="https://ip.lfe.mw.tum.de/sections/star.png" alt="star-o.png"></li>
         <li>#KillerApp <img src="https://ip.lfe.mw.tum.de/sections/star-o.png" alt="star-o.png"></li>
         <li>#FirstPersonOnMars <img src="https://ip.lfe.mw.tum.de/sections/star.png" alt="star-o.png"></li>
         <li>#Octoberfest <img src="https://ip.lfe.mw.tum.de/sections/star-o.png" alt="star-o.png"></li>
     </ul>
 </div>
-    
-<!-- #tab-bar: #container and #images -->
-<div>
+
+<!-- #tab-bar #container and #images -->
+<!-- #sweat #tab-bar -->
+<div id="tab-bar">
     <!-- #1 #channels #buttons -->
-    <button><img src="https://ip.lfe.mw.tum.de/sections/lightbulb-o.png" alt="lightbulb-o.png"> new</button>
-    <button><img src="https://ip.lfe.mw.tum.de/sections/fire.png" alt="fire.png"> trending</button>
-    <button><img src="https://ip.lfe.mw.tum.de/sections/star.png" alt="star.png"> favorites</button>
+    <button class="selected"><img src="https://ip.lfe.mw.tum.de/sections/lightbulb-o.png" alt="lightbulb-o.png"><br>new</button>
+    <button><img src="https://ip.lfe.mw.tum.de/sections/fire.png" alt="fire.png"><br>trending</button>
+    <button><img src="https://ip.lfe.mw.tum.de/sections/star.png" alt="star.png"><br>favorites</button>
 </div>
 
 <!-- chat area -->
+
 <!-- #1 #chat #name -->
 <h1>#SevenContinents
     <!-- #1 #chat #location is wrapped in small tag-->
@@ -135,8 +57,9 @@
     </small>
 </h1>
 
-<!-- #chat: #container -->
-<div>
+<!-- #chat #container -->
+<!-- #message #class -->
+<div class="message message_own">
     <!-- #1 #chat #metadata contains location, weekday, day, and time -->
     <h3>
         <!-- #2 #font #locations need an extra element, we'll use strong for w3w locations -->
@@ -152,8 +75,9 @@
     <button>+5 min.</button>
 </div>
 
-<!-- #chat: #container -->
-<div>
+<!-- #chat #container -->
+<!-- #message #class -->
+<div class="message">
     <!-- #1 #chat #metadata contains location, weekday, day, and time -->
     <h3>
         <!-- #2 #font #locations need an extra element, we'll use strong for w3w locations -->
@@ -168,8 +92,9 @@
     <button>+5 min.</button>
 </div>
 
-<!-- #chat: #container -->
-<div>
+<!-- #chat #container -->
+<!-- #message #class -->
+<div class="message">
     <!-- #1 #chat #metadata contains location, weekday, day, and time -->
     <h3>
         <!-- #2 #font #locations need an extra element, we'll use strong for w3w locations -->
@@ -184,8 +109,9 @@
     <button>+5 min.</button>
 </div>
 
-<!-- #chat: #container -->
-<div>
+<!-- #chat #container -->
+<!-- #message #class -->
+<div class="message">
     <!-- #1 #chat #metadata contains location, weekday, day, and time -->
     <h3>
         <!-- #2 #font #locations need an extra element, we'll use strong for w3w locations -->
@@ -200,8 +126,9 @@
     <button>+5 min.</button>
 </div>
 
-<!-- #chat: #container -->
-<div>
+<!-- #chat #container -->
+<!-- #message #class -->
+<div class="message">
     <!-- #1 #chat #metadata contains location, weekday, day, and time -->
     <h3>
         <!-- #2 #font #locations need an extra element, we'll use strong for w3w locations -->
@@ -216,8 +143,9 @@
     <button>+5 min.</button>
 </div>
 
-<!-- #chat: #container -->
-<div>
+<!-- #chat #container -->
+<!-- #message #class -->
+<div class="message">
     <!-- #1 #chat #metadata contains location, weekday, day, and time  -->
     <h3>
         <!-- #2 #font #locations need an extra element, we'll use strong for w3w locations -->
